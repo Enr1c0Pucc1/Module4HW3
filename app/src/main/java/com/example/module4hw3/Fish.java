@@ -1,33 +1,33 @@
 package com.example.module4hw3;
 
-public class Animal {
+public class Fish {
     private String name;
     private String animalDescription;
     private int animalResource;
     private String populationSize;
 
-    public Animal(String name, String animalDescription, int animalResource, String populationSize){
+    public Fish(String name, String animalDescription, int animalResource, String populationSize){
         this.name = name;
         this.animalDescription = animalDescription;
         this.animalResource = animalResource;
         this.populationSize = populationSize;
     }
-    public String getName(){
+    public String getFishName(){
         return name;
     }
-    public void setName(String name){
+    public void setFishName(String name){
         this.name = name;
     }
-    public String getAnimalDescription(){
+    public String getFishDescription(){
         return animalDescription;
     }
-    public void setAnimalDescription(String animalDescription){
+    public void setFishDescription(String animalDescription){
         this.animalDescription = animalDescription;
     }
-    public int getAnimalResource(){
+    public int getFishResource(){
         return animalResource;
     }
-    public void setAnimalResource(int animalResource){
+    public void setFishResource(int animalResource){
         this.animalResource = animalResource;
     }
     public String getPopulationSize(){

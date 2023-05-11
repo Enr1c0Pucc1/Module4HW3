@@ -7,39 +7,38 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class AnimalAdapter extends RecyclerView.Adapter<AnimalAdapter.ViewHolder> {
+public class FishAdapter extends RecyclerView.Adapter<FishAdapter.ViewHolder> {
 
     private final LayoutInflater inflater;
-    private final List<Animal> animals;
+    private final List<Fish> fishes;
 
-    public AnimalAdapter(Context context, List<Animal> animals){
+    public FishAdapter(Context context, List<Fish> fishes){
         this.inflater = LayoutInflater.from(context);
-        this.animals = animals;
+        this.fishes = fishes;
     }
 
     @Override
-    public AnimalAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public FishAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.list_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Animal animal = animals.get(position);
-        holder.animalView.setImageResource(animal.getAnimalResource());
-        holder.nameView.setText(animal.getName());
-        holder.animalDescriptionView.setText(animal.getAnimalDescription());
-        holder.populationSizeView.setText(animal.getPopulationSize());
+        Fish fish = fishes.get(position);
+        holder.animalView.setImageResource(fish.getFishResource());
+        holder.nameView.setText(fish.getFishName());
+        holder.animalDescriptionView.setText(fish.getFishDescription());
+        holder.populationSizeView.setText(fish.getPopulationSize());
     }
 
     @Override
     public int getItemCount() {
-        return animals.size();
+        return fishes.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
